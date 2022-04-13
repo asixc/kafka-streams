@@ -1,19 +1,18 @@
-# Ejercicio 1
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-Crear un proyecto java maven con Kafka clients y Kafka streams.
+    <groupId>org.example</groupId>
+    <artifactId>kafka-streams01</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-Crear datos demo en un topic con una clase Producer.
-
-En otra clase separada utilizar Kafka Streams para aplicar transformaciones sobre los datos del topic original enviarlos a otro topic, por ejemplo leer las longitudes de cadenas de texto, filtrar datos, aplicar una operación map, etc.
-
-El alumno elegirá los datos para el topic de entrada y de salida.
-
-Utilizar tipos básicos como por ejemplo String Double Long.
-
-## Proceso:
-### Añadir dependencias:
-```shell
-<dependencies>
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+    <dependencies>
         <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
         <dependency>
             <groupId>org.apache.kafka</groupId>
@@ -39,12 +38,4 @@ Utilizar tipos básicos como por ejemplo String Double Long.
             <version>3.1.0</version>
         </dependency>
     </dependencies>
-```
-
-### Añadir el fichero: `log4j.properties` con el contenido:
-```shell
-log4j.rootCategory=INFO, stdout
-log4j.appender.stdout=org.apache.log4j.ConsoleAppender
-log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
-log4j.appender.stdout.layout.ConversionPattern=%d{dd/MM/yyyy HH:mm:ss:SSS} %5p %t %c{2}:%L - %m%n
-```
+</project>
