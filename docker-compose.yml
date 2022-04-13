@@ -45,7 +45,6 @@ services:
         container_name: control-center-avro
         depends_on:
             - broker
-            - schema-registry
         ports:
             - "9021:9021"
         environment:
